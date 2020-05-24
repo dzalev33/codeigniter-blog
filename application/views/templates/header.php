@@ -31,11 +31,11 @@
 			<ul class="nav navbar-nav">
 				<li><a href="/ciblog/">Home</a></li>
 				<li><a href="/ciblog/about">About</a></li>
-				<li><a href="/ciblog/posts">Blog</a></li>
+				<li><a href="/ciblog/categories">Categories</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="<?php echo base_url(); ?>posts/create">Create Post</a></li>
-				
+				<li><a href="<?php echo base_url(); ?>categories/create">Create Category</a></li>
 			</ul>
 		</div>
 	</div>
