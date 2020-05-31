@@ -5,22 +5,27 @@
 	<?php echo $post['body']; ?>
 </div>
 
-<hr>
+<?php if ($this->session->userdata('user_id') === $post['user_id']) : ?>
 
-<a class="btn  btn-dark float-left mr-3" href="edit/<?php echo $post['slug'] ?>">Edit</a>
 
-<?php echo form_open('/posts/delete/' . $post['id']); ?>
+	<hr>
 
-<input type="submit" value="Delete" class="btn badge-danger">
-</form>
+	<a class="btn  btn-dark float-left mr-3" href="edit/<?php echo $post['slug'] ?>">Edit</a>
+
+	<?php echo form_open('/posts/delete/' . $post['id']); ?>
+
+	<input type="submit" value="Delete" class="btn badge-danger">
+	</form>
+
+<?php endif; ?>
 <hr>
 <h3>Comments</h3>
 <?php if ($comments) : ?>
 	<?php foreach ($comments as $comment) : ?>
-	<div class="well">
-		<h5><?php echo $comment['body']; ?> [by <strong><?php echo $comment['name']; ?></strong>]</h5>
-	</div>
-		<?php endforeach ?>
+		<div class="well">
+			<h5><?php echo $comment['body']; ?> [by <strong><?php echo $comment['name']; ?></strong>]</h5>
+		</div>
+	<?php endforeach ?>
 <?php else : ?>
 	<p>No comments to display</p>
 <?php endif; ?>
