@@ -14,6 +14,25 @@
 			width: 100%;
 		}
 
+		.pagination-link{
+			margin: 30px 0;
+
+		}
+
+		.pagination-link strong{
+			padding: 8px 13px;
+			margin: 5px;
+			background: #f4f4f4;
+			border: 1px #ccc solid;
+		}
+
+		a.pagination-link{
+			padding: 8px 13px;
+			margin: 5px;
+			background: #f4f4f4;
+			border: 1px #ccc solid;
+		}
+
 	</style>
 
 	<script src="http://cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
